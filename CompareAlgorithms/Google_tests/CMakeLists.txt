@@ -2,7 +2,10 @@ project(Google_tests)
 add_subdirectory(lib)
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
-add_executable(Google_Tests_run AlgorithmsTest.cpp)
+add_executable(Google_Tests_run
+        AlgorithmsTest.cpp
+        ../algorithms.h
+        ../algorithms/bubble-sort.cpp)
 
 # linking Google_Tests_run with DateConverter_lib which will be tested
 #target_link_libraries(Google_Tests_run DateConverter_lib)
