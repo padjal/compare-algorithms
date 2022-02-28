@@ -3,12 +3,14 @@
 #include "algorithms.h"
 #include "utils/logger.h"
 #include "utils/data-service.h"
-#include "utils/console-util.h"
+#include "utils/io-util.h"
 
 typedef void (*sortAlgorithm)(std::vector<int>&);
 
 int main() {
     Logger* logger = new Logger("log.txt");
+
+    logger->log("test");
 
     std::vector<int> v = {5, 2, 1, 2, 9};
 

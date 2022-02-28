@@ -7,15 +7,15 @@ add_executable(Google_Tests_run
         SmallNumbersTest.cpp
         ../utils/data-service.h
         ../utils/data-service.cpp
-        ../utils/console-util.h
-        ../utils/console-util.cpp
+        ../utils/io-util.h
+        ../utils/io-util.cpp
         ../algorithms.h
         ../algorithms/bubble-sort.cpp
         ../algorithms/count-sort.cpp
         ../algorithms/selection-sort.cpp
         ../algorithms/insertion-sort.cpp
         ../algorithms/merge-sort.cpp
-        ../algorithms/quick-sort.cpp ../utils/console-util.cpp ../utils/console-util.h)
+        ../algorithms/quick-sort.cpp ../utils/io-util.cpp ../utils/io-util.h)
 
 # linking Google_Tests_run with DateConverter_lib which will be tested
 #target_link_libraries(Google_Tests_run DateConverter_lib)

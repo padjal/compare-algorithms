@@ -5,7 +5,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(CompareAlgorithms
         main.cpp
-        generate-arrays.cpp
         algorithms.h
         algorithms/count-sort.cpp
         algorithms/bubble-sort.cpp
@@ -17,7 +16,7 @@ add_executable(CompareAlgorithms
         algorithms/quick-sort.cpp
         utils/data-service.h
         utils/data-service.cpp
-        utils/console-util.h
-        utils/console-util.cpp)
+        utils/io-util.h
+        utils/io-util.cpp)
 
 add_subdirectory(Google_tests)

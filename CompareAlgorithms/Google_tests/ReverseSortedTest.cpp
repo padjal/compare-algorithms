@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include "../algorithms.h"
 #include "../utils/data-service.h"
-#include "../utils/console-util.h"
+#include "../utils/io-util.h"
 
 class ReverseSorted : public ::testing::Test{
 protected:

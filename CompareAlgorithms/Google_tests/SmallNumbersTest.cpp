@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <random>
 #include "../algorithms.h"
-#include  "../utils/console-util.h"
+#include  "../utils/io-util.h"
 #include "../utils/data-service.h"
 
 class SmallNumbers : public ::testing::Test{
