@@ -2,48 +2,44 @@
 #include <vector>
 #include "algorithms.h"
 #include "utils/logger.h"
-
-void printVector(std::vector<int> &v){
-    for(int element : v){
-        std::cout << element << " ";
-    }
-}
+#include "utils/data-service.h"
+#include "utils/console-util.h"
 
 typedef void (*sortAlgorithm)(std::vector<int>&);
 
 int main() {
-    Logger* logger = new Logger();
+    Logger* logger = new Logger("log.txt");
 
     std::vector<int> v = {5, 2, 1, 2, 9};
 
-    /*sortAlgorithm sortFucntions[] = {
+    sortAlgorithm sortFucntions[] = {
             bubbleSort,
-            selectionSort,
-            bubbleSort
+            countSort,
+            insertionSort,
+            mergeSort,
+            quickSort,
+            selectionSort
     };
+
+    // Generate data
 
     for(auto sort_fucntion : sortFucntions){
         // Perform sort measurements for each sorting algorithm
 
-        // Measure small collections
+        // Measure small collections (50 - 300 elements), step 10
             // Measure with numbers [0, 5]
             // Measure with numbers [0, 4000]
             // Measure with almost sorted collection
             // Measure with reversely sorted collection
-        // Measure big collections
+        // Measure big collections (100 - 4000 elements), step 100
             // Measure with numbers [0, 5]
             // Measure with numbers [0, 4000]
             // Measure with almost sorted collection
             // Measure with reversely sorted collection
 
-        // Generate data
         // Measure sort
         // Record data
-    }*/
-
-    logger->log("hey");
-
-    logger->log("what's up");
+    }
 
     return 0;
 }

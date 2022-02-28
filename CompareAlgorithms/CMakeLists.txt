@@ -10,6 +10,14 @@ add_executable(CompareAlgorithms
         algorithms/count-sort.cpp
         algorithms/bubble-sort.cpp
         algorithms/selection-sort.cpp
-        utils/logger.cpp utils/logger.h)
+        utils/logger.cpp
+        utils/logger.h
+        algorithms/insertion-sort.cpp
+        algorithms/merge-sort.cpp
+        algorithms/quick-sort.cpp
+        utils/data-service.h
+        utils/data-service.cpp
+        utils/console-util.h
+        utils/console-util.cpp)
 
 add_subdirectory(Google_tests)

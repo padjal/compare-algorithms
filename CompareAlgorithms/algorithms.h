@@ -15,11 +15,14 @@
  *  - Pyramid
  */
 
-//Is broken. Check 5, 2, 1
 void bubbleSort(std::vector<int>& numbers);
 
 void countSort(std::vector<int>& numbers);
 
 void selectionSort(std::vector<int>& numbers);
 
-void testSort();
+void insertionSort(std::vector<int>& numbers);
+
+void mergeSort(std::vector<int>& numbers);
+
+void quickSort(std::vector<int>& numbers);

@@ -4,11 +4,11 @@
 
 #include <vector>
 
-void countSort(std::vector<int> *numbers) {
-    int max_element = numbers->at(0);
+void countSort(std::vector<int>& numbers) {
+    int max_element = numbers.at(0);
 
     // Find max element
-    for (int number : *numbers) {
+    for (int number : numbers) {
         if (number > max_element) {
             max_element = number;
         }
@@ -21,7 +21,7 @@ void countSort(std::vector<int> *numbers) {
         count[i] = 0;
     }
 
-    for (int number : *numbers) {
+    for (int number : numbers) {
         count[number]++;
     }
 
@@ -29,15 +29,15 @@ void countSort(std::vector<int> *numbers) {
         count[i] += count[i - 1];
     }
 
-    int *resulting_array = new int[numbers->size()];
+    int *resulting_array = new int[numbers.size()];
 
-    for (int i = numbers->size() - 1; i >= 0; --i) {
-        resulting_array[count[numbers->at(i)] - 1] = numbers->at(i);
-        count[numbers->at(i)]--;
+    for (int i = numbers.size() - 1; i >= 0; --i) {
+        resulting_array[count[numbers.at(i)] - 1] = numbers.at(i);
+        count[numbers.at(i)]--;
     }
 
-    for (int i = 0; i < numbers->size(); ++i) {
-        numbers->at(i) = resulting_array[i];
+    for (int i = 0; i < numbers.size(); ++i) {
+        numbers.at(i) = resulting_array[i];
     }
 
     // Free memory
