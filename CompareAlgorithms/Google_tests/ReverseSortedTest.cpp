@@ -2,6 +2,7 @@
 #include "../algorithms.h"
 #include "../utils/data-service.h"
 #include "../utils/io-util.h"
+#include "../utils/logger.h"
 
 class ReverseSorted : public ::testing::Test{
 protected:
@@ -9,6 +10,10 @@ protected:
      * Before each test, add numbers from 100 to 1 (reverse order).
      */
     void SetUp() override{
+        if(logger_ == nullptr){
+           logger_ = new Logger("../../results/tests/reverse_sorted_test.txt");
+        }
+
         numbers = generateReverseSortedVector(100);
     }
 
@@ -17,9 +22,14 @@ protected:
     }
 
     std::vector<int> numbers;
+    Logger* logger_;
 };
 
 TEST_F(ReverseSorted, BubbleSort){
+    logger_->log("===== BUBBLE SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     bubbleSort(numbers);
 
@@ -29,9 +39,15 @@ TEST_F(ReverseSorted, BubbleSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }
 
 TEST_F(ReverseSorted, CountSort){
+    logger_->log("===== COUNT SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     countSort(numbers);
 
@@ -41,9 +57,15 @@ TEST_F(ReverseSorted, CountSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }
 
 TEST_F(ReverseSorted, SelectionSort){
+    logger_->log("===== SELECTION SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     selectionSort(numbers);
 
@@ -53,9 +75,15 @@ TEST_F(ReverseSorted, SelectionSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }
 
 TEST_F(ReverseSorted, InsertionSort){
+    logger_->log("===== INSERTION SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     insertionSort(numbers);
 
@@ -65,9 +93,15 @@ TEST_F(ReverseSorted, InsertionSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }
 
 TEST_F(ReverseSorted, MergeSort){
+    logger_->log("===== MERGE SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     mergeSort(numbers);
 
@@ -77,9 +111,15 @@ TEST_F(ReverseSorted, MergeSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }
 
 TEST_F(ReverseSorted, QuickSort){
+    logger_->log("===== QUICK SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     mergeSort(numbers);
 
@@ -89,4 +129,6 @@ TEST_F(ReverseSorted, QuickSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }

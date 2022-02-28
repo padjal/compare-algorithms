@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
-#include <random>
 #include "../algorithms.h"
 #include  "../utils/io-util.h"
 #include "../utils/data-service.h"
+#include "../utils/logger.h"
 
 class SmallNumbers : public ::testing::Test{
 protected:
@@ -10,6 +10,10 @@ protected:
      * Before each test, add 50 small numbers (from 0 to 5).
      */
     void SetUp() override{
+        if(logger_ == nullptr){
+            logger_ = new Logger("../../results/tests/small_numbers_test.txt");
+        }
+
         numbers = generateVector(50, 0, 5);
     }
 
@@ -18,9 +22,14 @@ protected:
     }
 
     std::vector<int> numbers;
+    Logger* logger_;
 };
 
 TEST_F(SmallNumbers, BubbleSort){
+    logger_->log("===== BUBBLE SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     bubbleSort(numbers);
 
@@ -30,9 +39,15 @@ TEST_F(SmallNumbers, BubbleSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }
 
 TEST_F(SmallNumbers, CountSort){
+    logger_->log("===== COUNT SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     countSort(numbers);
 
@@ -42,9 +57,15 @@ TEST_F(SmallNumbers, CountSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }
 
 TEST_F(SmallNumbers, SelectionSort){
+    logger_->log("===== SELECTION SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     selectionSort(numbers);
 
@@ -54,9 +75,15 @@ TEST_F(SmallNumbers, SelectionSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }
 
 TEST_F(SmallNumbers, InsertionSort){
+    logger_->log("===== INSERTION SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     insertionSort(numbers);
 
@@ -66,9 +93,15 @@ TEST_F(SmallNumbers, InsertionSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }
 
 TEST_F(SmallNumbers, MergeSort){
+    logger_->log("===== MERGE SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     mergeSort(numbers);
 
@@ -78,9 +111,15 @@ TEST_F(SmallNumbers, MergeSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }
 
 TEST_F(SmallNumbers, QuickSort){
+    logger_->log("===== QUICK SORT =====");
+    logger_->log("Initial array: ");
+    logger_->log(numbers);
+
     // Act
     mergeSort(numbers);
 
@@ -90,4 +129,6 @@ TEST_F(SmallNumbers, QuickSort){
     EXPECT_TRUE(result);
 
     printVector(numbers);
+    logger_->log("Sorted array: ");
+    logger_->log(numbers);
 }

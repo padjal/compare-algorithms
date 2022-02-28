@@ -9,6 +9,8 @@ add_executable(Google_Tests_run
         ../utils/data-service.cpp
         ../utils/io-util.h
         ../utils/io-util.cpp
+        ../utils/logger.h
+        ../utils/logger.cpp
         ../algorithms.h
         ../algorithms/bubble-sort.cpp
         ../algorithms/count-sort.cpp
