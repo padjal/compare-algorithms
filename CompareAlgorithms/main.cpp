@@ -27,6 +27,10 @@ int getAverageTime(std::vector<int>& nums, sortAlgorithm sort){
 
         sort(vector_under_test);
 
+        if(!isSorted(vector_under_test)){
+            throw std::runtime_error("The array was not sorted properly!");
+        }
+
         auto elapsed = std::chrono::high_resolution_clock::now() - start;
 
         long milliseconds = std::chrono::duration_cast<std::chrono::microseconds>(elapsed).count();
