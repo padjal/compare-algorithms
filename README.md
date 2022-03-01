@@ -21,4 +21,6 @@ Stack: C++, Cmake, Google tests, Clion, Google spreadsheets
  - Export to CSV
 
 # Results
-The results of this experiment are divided in two parts.
+The results of this experiment are divided in two parts:
+ - The data files from each different collection of items 
+ - The resulting charts [This is a link](https://docs.google.com/spreadsheets/d/1PMlP1ESOIdAixUlooa60m8eL2VymPFyXyPgPI7gwLfo/edit?usp=sharing)
