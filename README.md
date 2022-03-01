@@ -43,10 +43,10 @@ This repository contains more than just the code used for this project. There ar
     - Included title and legend
  - ✅ Code documentation
  - ✅ Function pointers
+ - ✅ Result analysis
 
 
 ## 🗒️ Remaining work
- - ❌ Result analysis
  - ❌ Memory cleanup is all automatic
 
 ## 💎 Results
