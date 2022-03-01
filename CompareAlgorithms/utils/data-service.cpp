@@ -1,5 +1,8 @@
 #include <vector>
 #include <random>
+#include "data-service.h"
+
+const int DIFFERENT_ELEMENTS = 3;
 
 std::vector<int>& generateVector(int elems, int min_elem, int max_elem){
     std::vector<int>* result = new std::vector<int> ();
@@ -37,4 +40,22 @@ bool isSorted(const std::vector<int>& v){
     }
 
     return true;
+}
+
+std::vector<int> &generateAlmostSortedVector(int elems) {
+    auto *result = new std::vector<int>();
+
+    static std::minstd_rand eng{std::random_device{}()};
+    std::uniform_int_distribution rand{0, elems-1};
+
+    for (int i = 0; i < elems; ++i) {
+        result->push_back(i);
+    }
+
+    for (int i = 0; i < DIFFERENT_ELEMENTS; ++i) {
+        // Swap some elements in the sorted array.
+        std::swap(result->at(rand(eng)), result->at(rand(eng)));
+    }
+
+    return *result;
 }

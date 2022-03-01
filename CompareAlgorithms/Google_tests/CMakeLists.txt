@@ -17,7 +17,7 @@ add_executable(Google_Tests_run
         ../algorithms/selection-sort.cpp
         ../algorithms/insertion-sort.cpp
         ../algorithms/merge-sort.cpp
-        ../algorithms/quick-sort.cpp ../utils/io-util.cpp ../utils/io-util.h)
+        ../algorithms/quick-sort.cpp ../utils/io-util.cpp ../utils/io-util.h AlmostSortedTest.cpp)
 
 # linking Google_Tests_run with DateConverter_lib which will be tested
 #target_link_libraries(Google_Tests_run DateConverter_lib)

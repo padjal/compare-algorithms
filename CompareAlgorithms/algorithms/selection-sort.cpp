@@ -1,8 +1,6 @@
 #include <algorithm>
 
-int selectionSort(std::vector<int>& numbers) {
-    int swaps = 0;
-
+void selectionSort(std::vector<int>& numbers) {
     for (int i = 0; i < numbers.size() - 1; ++i) {
         int min_element_index = i;
         for (int j = i + 1; j < numbers.size(); ++j) {
@@ -12,9 +10,6 @@ int selectionSort(std::vector<int>& numbers) {
         }
         if (i != min_element_index) {
             std::swap(numbers[i], numbers[min_element_index]);
-            swaps++;
         }
     }
-
-    return swaps;
 }
