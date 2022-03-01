@@ -5,6 +5,7 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 add_executable(Google_Tests_run
         ReverseSortedTest.cpp
         SmallNumbersTest.cpp
+        BigNumbersTest.cpp
         ../utils/data-service.h
         ../utils/data-service.cpp
         ../utils/io-util.h
