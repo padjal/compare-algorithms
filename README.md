@@ -1,6 +1,8 @@
 # compare-algorithms ⏲️
 ## ➡️ Intro
-This project compares the speed of different algorithms. It does so by running many tests and recording the time spent. Using this information, I have presented the information in graphs, which help to understand the information more easily. ![Compare algorithms photo](/diagrams/Measure%20with%20reversely%20sorted%20collection%20-%20300%20elements.png)
+This project compares the speed of different algorithms. It does so by running many tests and recording the time spent. Using this information, I have presented the information in graphs, which help to understand the information more easily. 
+
+![Compare algorithms photo](/diagrams/Measure%20with%20reversely%20sorted%20collection%20-%20300%20elements.png)
 
 ## 👦 About me
 This project is completed as a part of my second year bachelor's course <i>"Applications and Analysis of Algorithms"</i> at HSE university, Moscow.
@@ -24,7 +26,7 @@ This repository contains more than just the code used for this project. There ar
   - [Data](https://github.com/padjal/compare-algorithms/tree/main/data) - a folder containing results used for the diagrams
   - [Diagrams](https://github.com/padjal/compare-algorithms/tree/main/diagrams) - folder containing the resulting diagrams
 
-## Completed items
+## 🗒️ Completed items
  - ✅ Implement algorithms:
     - Bubble sort
     - Count sort
@@ -43,13 +45,13 @@ This repository contains more than just the code used for this project. There ar
  - ✅ Function pointers
 
 
-## Remaining work
+## 🗒️ Remaining work
  - ❌ Result analysis
  - ❌ Memory cleanup is all automatic
 
 ## 💎 Results
 The results of this experiment are divided in two parts:
  - The data files from each different collection of items 
- - The resulting charts [This is a link](https://docs.google.com/spreadsheets/d/1PMlP1ESOIdAixUlooa60m8eL2VymPFyXyPgPI7gwLfo/edit?usp=sharing)
+ - The resulting tables and charts [charts](https://docs.google.com/spreadsheets/d/1PMlP1ESOIdAixUlooa60m8eL2VymPFyXyPgPI7gwLfo/edit?usp=sharing)
 
- The complete analysis of the project can be found [here]().
+ The complete analysis of the project can be found [here](result_analysis.md).
